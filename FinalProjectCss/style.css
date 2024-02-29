@@ -1,0 +1,164 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F7FBEC;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* navigation bar */
+/* Navigation bar styles */
+header {
+  background-color: #1B262C;
+  color: #3282B8;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #3282B8;
+  text-decoration: none;
+}
+
+.container{
+  display: block;
+  height: 100vh;
+}
+.Old_cars,.New_cars{
+  position: relative;
+  width: 100%; 
+  height: 100vh; 
+  background-image: url(https://hips.hearstapps.com/townandcountry/assets/16/14/1954-mercedes-300sl-gullwing-a_1.jpg); 
+  background-size: cover; 
+  background-position: center; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+}
+.New_cars{
+  background-image:url(https://www.mg.co.uk/sites/default/files/2022-07/Hero_0.jpg);
+}
+.Old_cars > h2,
+.New_cars > h2 {
+  text-align: center;
+  color: #BBE1FA; /* Set text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
+  padding: 20px; /* Add padding for better readability */
+}
+
+
+
+/* -------------------------------- */
+/* Responsive font sizes */
+h {
+  font-size: 3em; /* Base font size */
+}
+
+p {
+  font-size: 1.5em; /* Base font size */
+}
+
+/* Media query for adjusting font sizes at smaller screen sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+}
+
+nav ul li a:hover {
+  color: #BBE1FA; 
+}
+
+
+/* Gallery with CSS Grid */
+.ocg-1{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #3282B8;
+}
+
+.contenr-grid{
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+  padding: 10PX;
+  padding: 10;
+  
+  
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200PX;
+  background-color: #3282B8;
+  border: solid ;
+  transition: transform 0.3s ease;
+}
+
+
+.grid-item:hover img {
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Gallery with Flexbox */
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.flex-item {
+  flex: 1 0 200px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.flex-item:last-child {
+  margin-right: 0;
+}
+
+.flex-item img {
+  width: 100%;
+  height: auto;
+}
+.flex-item img {
+  width: 100%;
+  height: 250PX;
+  background-color: #3282B8;
+  border: solid ;
+  transition: transform 0.3s ease;
+}
+
+
+.flex-item:hover img {
+  transform: scale(1.1); /* Zoom in effect */
+}
+.flex-item:nth-child(odd) img {
+  border-radius: 50%; /
+}
+
+
+
+
