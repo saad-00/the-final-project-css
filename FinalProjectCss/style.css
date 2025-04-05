@@ -1,164 +1,296 @@
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F7FBEC;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+/* متغيرات لتوحيد الألوان */
+:root {
+  --primary-color: #3282B8;
+  --secondary-color: #1B262C;
+  --accent-color: #BBE1FA;
+  --background-color: #F7FBEC;
+  --text-color: #333;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* navigation bar */
-/* Navigation bar styles */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* تحسين شريط التنقل */
 header {
-  background-color: #1B262C;
-  color: #3282B8;
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
   padding: 10px 0;
 }
 
 nav ul {
   list-style-type: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 0 10px;
 }
 
 nav ul li a {
-  color: #3282B8;
+  color: var(--primary-color);
   text-decoration: none;
-}
-
-.container{
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 4px;
   display: block;
-  height: 100vh;
-}
-.Old_cars,.New_cars{
-  position: relative;
-  width: 100%; 
-  height: 100vh; 
-  background-image: url(https://hips.hearstapps.com/townandcountry/assets/16/14/1954-mercedes-300sl-gullwing-a_1.jpg); 
-  background-size: cover; 
-  background-position: center; 
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  overflow: hidden;
-}
-.New_cars{
-  background-image:url(https://www.mg.co.uk/sites/default/files/2022-07/Hero_0.jpg);
-}
-.Old_cars > h2,
-.New_cars > h2 {
-  text-align: center;
-  color: #BBE1FA; /* Set text color */
-  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
-  padding: 20px; /* Add padding for better readability */
-}
-
-
-
-/* -------------------------------- */
-/* Responsive font sizes */
-h {
-  font-size: 3em; /* Base font size */
-}
-
-p {
-  font-size: 1.5em; /* Base font size */
-}
-
-/* Media query for adjusting font sizes at smaller screen sizes */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
 }
 
 nav ul li a:hover {
-  color: #BBE1FA; 
+  color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
 }
 
+/* تحسين الصفحة الرئيسية */
+.container {
+  display: block;
+}
 
-/* Gallery with CSS Grid */
-.ocg-1{
+.Old_cars, .New_cars {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* تأثير parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Old_cars {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://hips.hearstapps.com/townandcountry/assets/16/14/1954-mercedes-300sl-gullwing-a_1.jpg);
+}
+
+.New_cars {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.mg.co.uk/sites/default/files/2022-07/Hero_0.jpg);
+}
+
+.Old_cars > h2,
+.New_cars > h2 {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  line-height: 1.8;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.Old_cars:hover > h2,
+.New_cars:hover > h2 {
+  transform: translateY(-10px);
+}
+
+/* تحسين معارض الصور */
+.ocg-1 {
   text-align: center;
   width: 100%;
-  height: 100%;
-  color: #3282B8;
+  padding: 40px 0;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
-.contenr-grid{
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+.ocg-1 h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+.contenr-grid {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* تحسين معرض Grid */
 .grid-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 30px;
-  padding: 10PX;
-  padding: 10;
-  
-  
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
 .grid-item img {
   width: 100%;
-  height: 200PX;
-  background-color: #3282B8;
-  border: solid ;
-  transition: transform 0.3s ease;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  vertical-align: middle;
 }
-
 
 .grid-item:hover img {
-  transform: scale(1.1); /* Zoom in effect */
+  transform: scale(1.1);
 }
 
-/* Gallery with Flexbox */
+/* تحسين معرض Flex */
 .flex-gallery {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .flex-item {
-  flex: 1 0 200px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.flex-item:last-child {
-  margin-right: 0;
+  flex: 1 0 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
 .flex-item img {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  vertical-align: middle;
 }
-.flex-item img {
-  width: 100%;
-  height: 250PX;
-  background-color: #3282B8;
-  border: solid ;
-  transition: transform 0.3s ease;
-}
-
 
 .flex-item:hover img {
-  transform: scale(1.1); /* Zoom in effect */
+  transform: scale(1.1);
 }
+
+/* تأثير دائري للصور الفردية في Flex Gallery */
 .flex-item:nth-child(odd) img {
-  border-radius: 50%; /
+  border-radius: 50%;
 }
 
+/* تحسين تذييل الصفحة */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
 
+/* طبقة معلومات الصورة */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(27, 38, 44, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
 
+.grid-item:hover .image-overlay,
+.flex-item:hover .image-overlay {
+  height: 30%;
+}
 
+.overlay-text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+/* زر العودة لأعلى (تنفيذ CSS فقط) */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  box-shadow: var(--shadow);
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+.scroll-top::after {
+  content: "↑";
+  font-size: 24px;
+}
+
+/* وسائط الاستعلام للتصميم المتجاوب */
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 15px;
+  }
+  
+  .flex-item {
+    flex: 1 0 150px;
+  }
+  
+  .Old_cars > h2,
+  .New_cars > h2 {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  nav ul li {
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .ocg-1 h1 {
+    font-size: 1.8em;
+  }
+  
+  .Old_cars, .New_cars {
+    height: 70vh;
+  }
+}

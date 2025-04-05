@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>معرض السيارات - الرئيسية</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                 <li><a href="OldCarsPhoto.html">Old Cars Gallery</a></li>
-                <li><a href="NewCarsPhoto.html">New Cars Gallery</a></li>
-                <li><a href="#">Main content</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="OldCarsPhoto.html">معرض السيارات القديمة</a></li>
+                <li><a href="NewCarsPhoto.html">معرض السيارات الحديثة</a></li>
+                <li><a href="#">المحتوى الرئيسي</a></li>
             </ul>
         </nav>
     </header>
@@ -22,19 +21,34 @@
     <div class="container">
         <section class="Old_cars">
             <h2>
-                Old cars hold a special place in automotive history, embodying an era of simplicity, durability, and mechanical charm. These vehicles, often devoid of the digital complexities found in modern counterparts, evoke nostalgia and a sense of craftsmanship. From the iconic designs of the mid-20th century to the rugged reliability of earlier models, old cars reflect the evolution of automotive engineering and the cultural zeitgeist of their time.
+                تحتل السيارات القديمة مكانة خاصة في تاريخ السيارات، فهي تجسد عصر البساطة والمتانة والسحر الميكانيكي. هذه السيارات، التي غالبًا ما تخلو من التعقيدات الرقمية الموجودة في نظيراتها الحديثة، تثير الحنين والإحساس بالحرفية. من التصميمات الأيقونية في منتصف القرن العشرين إلى الموثوقية الصلبة للطرازات السابقة، تعكس السيارات القديمة تطور هندسة السيارات والروح الثقافية لعصرها.
             </h2>
         </section>
 
         <section class="New_cars">
             <h2>
-                In the ever-evolving landscape of automotive technology, the arrival of new cars brings forth a wave of innovation, redefining the driving experience and reshaping the automotive industry. From advancements in electrification to cutting-edge autonomous features, new cars continue to push the boundaries of possibility. Let's embark on a journey through the latest trends and innovations shaping the world of automobiles.
+                في المشهد المتطور باستمرار لتكنولوجيا السيارات، يأتي ظهور السيارات الجديدة بموجة من الابتكار، معيدًا تعريف تجربة القيادة وإعادة تشكيل صناعة السيارات. من التقدم في الكهربة إلى ميزات القيادة الذاتية المتطورة، تواصل السيارات الجديدة توسيع حدود الإمكانيات. دعنا ننطلق في رحلة عبر أحدث الاتجاهات والابتكارات التي تشكل عالم السيارات.
             </h2>
         </section>
     </div>
     
+    <!-- قسم "سيارة الشهر" الجديد -->
+    <section class="car-of-month">
+        <h2 style="text-align: center; padding: 20px; color: var(--primary-color);">سيارة الشهر</h2>
+        <div style="display: flex; max-width: 1000px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow);">
+            <img src="https://www.autoexpress-eg.com/wp-content/uploads/2024/01/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B1%D9%88%D9%84%D8%B2-%D8%B1%D9%88%D9%8A%D8%B3-2023.jpg" alt="سيارة الشهر" style="width: 50%; object-fit: cover;">
+            <div style="padding: 20px; width: 50%;">
+                <h3 style="color: var(--secondary-color);">رولز رويس فانتوم (2023)</h3>
+                <p>الرمز الأيقوني للفخامة والتميز، تجمع رولز رويس فانتوم بين الحرفية التقليدية والتكنولوجيا الحديثة لتقديم تجربة قيادة استثنائية لا مثيل لها في عالم السيارات.</p>
+                <a href="OldCarsPhoto.html" style="display: inline-block; background: var(--primary-color); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 10px;">عرض المزيد</a>
+            </div>
+        </div>
+    </section>
+    
     <footer class="footer">
-        <p>&copy; 2024 Your Website</p>
+        <p>&copy; 2024 معرض السيارات - جميع الحقوق محفوظة</p>
     </footer>
+    
+    <a href="#" class="scroll-top"></a>
 </body>
 </html>
